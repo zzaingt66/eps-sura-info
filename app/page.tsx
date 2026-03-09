@@ -63,41 +63,49 @@ const SERVICIOS_PRINCIPALES = [
     titulo: "Atención Médica Integral",
     descripcion:
       "Red amplia de instituciones y profesionales de la salud para consultas médicas generales y especializadas, exámenes diagnósticos, hospitalizaciones, cirugías y urgencias las 24 horas.",
+    imagen: "/salud-integral.webp",
   },
   {
     titulo: "Programas de Promoción y Prevención",
     descripcion:
       "Servicios orientados al cuidado preventivo: control de crecimiento y desarrollo, vacunación, control prenatal, detección temprana de cáncer, prevención de enfermedades crónicas y programas de salud ocupacional.",
+    imagen: "/prevencion-sura.jpg",
   },
   {
     titulo: "Medicamentos",
     descripcion:
       "Suministro de medicamentos incluidos en el Plan de Beneficios en Salud (PBS) a través de una red de farmacias autorizadas en todo el país.",
+    imagen: "/medicamentos-sura.webp",
   },
   {
     titulo: "Servicios Digitales",
     descripcion:
       "Plataforma digital SURA para agendar citas médicas, consultar resultados de exámenes, descargar certificados, acceder a telemedicina y gestionar autorizaciones en línea.",
+    imagen: "/canales-digitales-sura.jpg",
   },
   {
     titulo: "Atención Domiciliaria",
     descripcion:
       "Servicios de salud en el hogar para pacientes que lo requieren, incluyendo cuidados post-hospitalarios, manejo de enfermedades crónicas y atención paliativa.",
+    imagen: "/domicilio-sura.jpg",
   },
   {
     titulo: "Salud Mental",
     descripcion:
       "Atención psicológica y psiquiátrica, programas de bienestar emocional, líneas de apoyo y acompañamiento en situaciones de crisis.",
+    imagen: "/salud-mental.jpg",
   },
   {
     titulo: "Maternidad",
     descripcion:
       "Acompañamiento integral durante el embarazo, parto y posparto, incluyendo controles prenatales, exámenes, atención del parto y cuidados del recién nacido.",
+    imagen: "/maternidad.jpg",
   },
   {
     titulo: "Gestión de Enfermedades Crónicas",
     descripcion:
       "Programas especializados para el manejo de diabetes, hipertensión, enfermedades cardiovasculares, cáncer y otras condiciones crónicas con seguimiento continuo.",
+    imagen: "/enfermedades-cronicas.jpg",
   },
 ];
 
@@ -286,18 +294,29 @@ export default function Home() {
                 </section>
               </div>
             ) : activeTab === "servicios" ? (
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="mt-4 grid gap-5 sm:grid-cols-2">
                 {SERVICIOS_PRINCIPALES.map((servicio, index) => (
                   <div
                     key={`servicio-${index}`}
-                    className="rounded-2xl border border-white/55 bg-white/35 p-4 backdrop-blur-sm transition-all hover:bg-white/50"
+                    className="service-card group relative overflow-hidden rounded-3xl border border-white/60 bg-white/40 backdrop-blur-sm transition-all duration-500 hover:border-[var(--sura-blue-500)] hover:bg-white/55 hover:shadow-[0_20px_40px_-15px_rgba(0,51,160,0.25)]"
                   >
-                    <h4 className="font-display text-base font-semibold text-[var(--sura-blue-900)]">
-                      {servicio.titulo}
-                    </h4>
-                    <p className="mt-2 text-[14px] leading-6 text-[var(--ink-strong)]">
-                      {servicio.descripcion}
-                    </p>
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={servicio.imagen}
+                        alt={servicio.titulo}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    </div>
+                    <div className="p-5">
+                      <h4 className="font-display text-lg font-semibold leading-tight text-[var(--sura-blue-900)] transition-colors group-hover:text-[var(--sura-blue-700)]">
+                        {servicio.titulo}
+                      </h4>
+                      <p className="mt-3 text-[14px] leading-6 text-[var(--ink-strong)]">
+                        {servicio.descripcion}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
