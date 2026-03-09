@@ -37,6 +37,8 @@ jobs:
         run: pnpm install
 
       - name: Build
+        env:
+          NEXT_PUBLIC_DEPLOY_TARGET: github-pages
         run: pnpm run build
 
       - name: Setup Pages

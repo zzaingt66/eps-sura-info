@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
+const isGitHubPages = process.env.NEXT_PUBLIC_DEPLOY_TARGET === "github-pages";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? "/eps-sura-info" : "",
+  basePath: isGitHubPages ? "/eps-sura-info" : "",
   images: {
     unoptimized: true,
   },
