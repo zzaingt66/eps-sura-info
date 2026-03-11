@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 
-type TabKey = "resena" | "proposito" | "contacto";
+type TabKey = "resena" | "proposito" | "objetivos";
 
 const TABS: Array<{ key: TabKey; label: string }> = [
   { key: "resena", label: "Reseña histórica" },
-  { key: "proposito", label: "Misión, visión y lema" },
-  { key: "contacto", label: "Canales de atención" },
+  { key: "proposito", label: "Misión y visión" },
+  { key: "objetivos", label: "Objetivos generales" },
 ];
 
 const SECTION_META: Record<TabKey, { title: string; description: string }> = {
@@ -18,14 +18,14 @@ const SECTION_META: Record<TabKey, { title: string; description: string }> = {
       "Origen, motivación y proyección de VitaNova IPS desde su creación en 2026.",
   },
   proposito: {
-    title: "Misión, visión y lema",
+    title: "Misión y visión",
     description:
       "Declaraciones institucionales que resumen el propósito y la meta de crecimiento de VitaNova IPS.",
   },
-  contacto: {
-    title: "Canales de atención",
+  objetivos: {
+    title: "Objetivos generales",
     description:
-      "Información de contacto disponible para usuarios en Cali y el resto del país.",
+      "Propósitos estratégicos que orientan el servicio integral y el compromiso de VitaNova IPS con sus usuarios.",
   },
 };
 
@@ -40,9 +40,12 @@ const RESENA_HISTORICA = [
 ];
 
 const CORPORATE_INFO = [
+
   { label: "Razón social", value: "Vitanova Servicios Integrales de Salud S.A.S." },
-  { label: "Fundación", value: "09 de marzo de 2026" },
-  { label: "Lema", value: "Cuidamos tu salud, mejoramos tu vida." },
+  { label: "NIT", value: "901.456.789-1" },
+  { label: "Consecutivo", value: "IPS-0001-2026" },
+
+
 ];
 
 const CONTACT_LINES = [
@@ -67,10 +70,13 @@ const PURPOSE_CARDS = [
     description:
       "Para el año 2030, ser una IPS reconocida por la calidad de sus servicios, la atención humanizada y el compromiso con la salud y el bienestar de nuestros usuarios.",
   },
-  {
-    title: "Lema",
-    description: "Cuidamos tu salud, mejoramos tu vida.",
-  },
+
+];
+
+const GENERAL_OBJECTIVES = [
+  "Brindar servicios de salud con calidad, seguridad y atención humanizada a todos los usuarios.",
+  "Promover la prevención de enfermedades y el cuidado de la salud en la comunidad.",
+  "Garantizar el acceso oportuno y eficiente a los servicios de salud, contribuyendo al bienestar y mejoramiento de la calidad de vida de los usuarios.",
 ];
 
 const FOUNDING_PILLARS = [
@@ -155,9 +161,7 @@ export default function Home() {
           </div>
 
           <div className="mt-6 rounded-[1.6rem] border border-white/55 bg-[linear-gradient(160deg,rgba(255,255,255,0.52),rgba(255,228,232,0.34))] px-4 py-4 shadow-[0_18px_35px_-28px_rgba(107,0,14,0.55)] backdrop-blur-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
-              Oficina Cali
-            </p>
+
             <p className="mt-3 font-display text-xl font-semibold text-brand-950">
               {CALI_OFFICE.name}
             </p>
@@ -167,7 +171,7 @@ export default function Home() {
               href="mailto:Vitanovasalud@gmail.com"
               className="mt-4 inline-flex rounded-full border border-brand-500 px-4 py-2 text-sm font-semibold text-brand-950 transition-colors hover:bg-brand-500/16"
             >
-              Vitanovasalud@gmail.com
+              vitanovasalud@gmail.com
             </a>
           </div>
         </aside>
@@ -181,32 +185,8 @@ export default function Home() {
             <div className="mt-3 flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
               <div className="max-w-3xl">
                 <h2 className="font-display text-3xl font-semibold text-brand-950 sm:text-5xl">
-                  Una IPS pensada para servir con calidad y cercanía.
+                  Vitanova IPS
                 </h2>
-                <p className="mt-4 text-sm leading-6 text-ink-soft sm:text-[15px]">
-                  VitaNova IPS surge desde la iniciativa de cuatro estudiantes que decidieron convertir su interés por la salud en una institución enfocada en el bienestar, la prevención y el acompañamiento responsable de la comunidad.
-                </p>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-3 xl:min-w-90 xl:max-w-105 xl:flex-1">
-                <div className="rounded-2xl border border-white/60 bg-white/45 px-4 py-3 backdrop-blur-sm">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
-                    Creación
-                  </p>
-                  <p className="mt-1 font-display text-xl font-semibold text-brand-950">2026</p>
-                </div>
-                <div className="rounded-2xl border border-white/60 bg-white/45 px-4 py-3 backdrop-blur-sm">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
-                    Proyección
-                  </p>
-                  <p className="mt-1 font-display text-xl font-semibold text-brand-950">2030</p>
-                </div>
-                <div className="rounded-2xl border border-white/60 bg-white/45 px-4 py-3 backdrop-blur-sm">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
-                    Origen
-                  </p>
-                  <p className="mt-1 font-display text-xl font-semibold text-brand-950">4 estudiantes</p>
-                </div>
               </div>
             </div>
           </header>
@@ -223,11 +203,10 @@ export default function Home() {
                   key={tab.key}
                   type="button"
                   onClick={() => setActiveTab(tab.key)}
-                  className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700 ${
-                    isActive
+                  className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700 ${isActive
                       ? "border-transparent bg-linear-to-br from-brand-950 to-brand-700 text-white shadow-[0_18px_35px_-24px_rgba(107,0,14,0.95)]"
                       : "border-white/60 bg-white/40 text-brand-950 hover:bg-white/60"
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -277,23 +256,20 @@ export default function Home() {
                 {PURPOSE_CARDS.map((item) => (
                   <section
                     key={item.title}
-                    className={`detail-card rounded-[1.6rem] border border-white/60 p-5 backdrop-blur-sm ${
-                      item.title === "Lema"
+                    className={`detail-card rounded-[1.6rem] border border-white/60 p-5 backdrop-blur-sm ${item.title === "Lema"
                         ? "bg-linear-to-br from-brand-900 to-brand-700 text-white lg:col-span-2"
                         : "bg-white/42"
-                    }`}
+                      }`}
                   >
                     <p
-                      className={`text-[10px] font-semibold uppercase tracking-[0.16em] ${
-                        item.title === "Lema" ? "text-white/20" : "text-brand-700"
-                      }`}
+                      className={`text-[10px] font-semibold uppercase tracking-[0.16em] ${item.title === "Lema" ? "text-white/20" : "text-brand-700"
+                        }`}
                     >
                       {item.title}
                     </p>
                     <p
-                      className={`mt-3 text-[15px] leading-7 ${
-                        item.title === "Lema" ? "font-display text-3xl font-semibold leading-tight" : "text-ink-strong"
-                      }`}
+                      className={`mt-3 text-[15px] leading-7 ${item.title === "Lema" ? "font-display text-3xl font-semibold leading-tight" : "text-ink-strong"
+                        }`}
                     >
                       {item.description}
                     </p>
@@ -301,48 +277,18 @@ export default function Home() {
                 ))}
               </div>
             ) : (
-              <div className="mt-6 grid gap-4 lg:grid-cols-2">
-                <section className="detail-card rounded-[1.6rem] border border-white/60 bg-white/42 p-5 backdrop-blur-sm lg:col-span-2">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
-                    Oficina principal
-                  </p>
-                  <h4 className="mt-2 font-display text-2xl font-semibold text-brand-950">
-                    {CALI_OFFICE.name}
-                  </h4>
-                  <p className="mt-3 text-[15px] leading-7 text-ink-strong">{CALI_OFFICE.address}</p>
-                  <p className="mt-3 text-sm leading-6 text-ink-soft">{CALI_OFFICE.hours}</p>
-                </section>
-
-                <section className="detail-card rounded-[1.6rem] border border-white/60 bg-white/42 p-5 backdrop-blur-sm">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
-                    Líneas disponibles
-                  </p>
-                  <div className="mt-4 space-y-4">
-                    {CONTACT_LINES.map((item) => (
-                      <div key={item.city} className="rounded-2xl border border-[rgba(107,0,14,0.12)] bg-white/60 px-4 py-3">
-                        <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-700">
-                          {item.city}
-                        </p>
-                        <p className="mt-2 text-base font-medium text-brand-950">{item.phone}</p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="detail-card rounded-[1.6rem] border border-white/60 bg-[linear-gradient(140deg,rgba(255,228,232,0.92),rgba(255,255,255,0.78))] p-5 backdrop-blur-sm">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
-                    Correo
-                  </p>
-                  <a
-                    href="mailto:Vitanovasalud@gmail.com"
-                    className="mt-4 inline-flex text-lg font-semibold text-brand-950 underline decoration-[rgba(107,0,14,0.35)] underline-offset-4"
+              <div className="mt-6 ">
+                {GENERAL_OBJECTIVES.map((objective, index) => (
+                  <section
+                    key={`objetivo-${index}`}
+                    className="detail-card rounded-[1.6rem] border border-white/60 bg-white/42 p-5 backdrop-blur-sm"
                   >
-                    Vitanovasalud@gmail.com
-                  </a>
-                  <p className="mt-4 text-sm leading-6 text-ink-soft">
-                    Canal habilitado para orientación y acompañamiento a los usuarios de VitaNova IPS.
-                  </p>
-                </section>
+                    <p className="text-md text-ink-strong">
+                      <span className="mr-4 font-semibold text-brand-700">{index + 1}.</span>
+                        {objective}
+                    </p>
+                  </section>
+                ))}
               </div>
             )}
           </article>
