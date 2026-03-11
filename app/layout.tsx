@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Sora, Source_Sans_3 } from "next/font/google";
+import { Cormorant_Garamond, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 
-const titleFont = Sora({
-  variable: "--font-sura-title",
+const titleFont = Cormorant_Garamond({
+  variable: "--font-vitanova-title",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
 
-const bodyFont = Source_Sans_3({
-  variable: "--font-sura-body",
+const bodyFont = Manrope({
+  variable: "--font-vitanova-body",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -20,8 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EPS SURA | Reseña histórica",
-  description: "Página SPA con core data, reseña histórica y misión/visión de EPS SURA.",
+  title: "VitaNova IPS | Reseña institucional",
+  description:
+    "Sitio informativo de VitaNova IPS con reseña histórica, propósito institucional y canales de atención.",
 };
 
 export default function RootLayout({
