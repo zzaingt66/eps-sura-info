@@ -157,7 +157,7 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Enfermería",
     description:
       "Servicios básicos de apoyo como aplicación de inyecciones, curaciones, toma de signos vitales y seguimiento de pacientes.",
-    imageSrc: "/services/enfermeria.jpg",
+    imageSrc: "/services/atencion-domiciliaria.jpg",
     imageAlt: "Atención de enfermería a paciente",
   },
   {
@@ -192,7 +192,7 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Atención domiciliaria",
     description:
       "Servicios de salud brindados en la casa del paciente, especialmente para personas con dificultad para desplazarse.",
-    imageSrc: "/services/atencion-domiciliaria.jpg",
+    imageSrc: "/services/enfermeria.jpg",
     imageAlt: "Atención domiciliaria con personal de salud",
   },
   {
