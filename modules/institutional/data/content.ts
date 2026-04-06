@@ -10,12 +10,12 @@ import type {
 } from "../types/content";
 
 export const TABS: TabDefinition[] = [
-  { key: "resena", label: "Reseña histórica" },
-  { key: "proposito", label: "Misión y visión" },
-  { key: "objetivos", label: "Objetivos generales" },
-  { key: "politicasCalidad", label: "Políticas de Calidad" },
   { key: "valoresInstitucionales", label: "Valores Institucionales" },
-  { key: "serviciosIps", label: "Servicios de una IPS" },
+  { key: "politicasCalidad", label: "Políticas de Calidad" },
+  { key: "serviciosIps", label: "Servicios de una IPS" }, 
+  { key: "objetivos", label: "Objetivos generales" },
+  { key: "proposito", label: "Misión y visión" },
+  { key: "resena", label: "Reseña histórica" },
 ];
 
 export const SECTION_META: Record<TabKey, SectionMeta> = {
