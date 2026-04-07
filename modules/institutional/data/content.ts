@@ -7,6 +7,7 @@ import type {
   TabDefinition,
   TabKey,
   TitleDescriptionItem,
+  TitleItemsItem,
 } from "../types/content";
 
 export const TABS: TabDefinition[] = [
@@ -16,7 +17,7 @@ export const TABS: TabDefinition[] = [
   { key: "politicasCalidad", label: "Políticas de Calidad" },
   { key: "objetivos", label: "Objetivos generales" },
   { key: "serviciosIps", label: "Servicios de una IPS" },
-
+  { key: "descripcionServicios", label: "Descripción de servicios" },
 ];
 
 export const SECTION_META: Record<TabKey, SectionMeta> = {
@@ -50,6 +51,11 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
     title: "Servicios de una IPS",
     description:
       "Portafolio de servicios esenciales para atención integral, prevención, diagnóstico y rehabilitación de los usuarios.",
+  },
+  descripcionServicios: {
+    title: "Descripción de servicios",
+    description:
+      "Detalle de cada servicio ofrecido por VitaNova IPS: qué es, en qué consiste y cómo beneficia al usuario.",
   },
 };
 
@@ -111,6 +117,36 @@ export const GENERAL_OBJECTIVES: TitleDescriptionItem[] = [
     title: "Acceso Oportuno y Eficiencia en la Atención",
     description:
       "Asegurar el acceso oportuno a los servicios de salud a través de una gestión eficiente de los recursos, optimización de los tiempos de atención y fortalecimiento de los procesos administrativos y asistenciales.",
+  },
+];
+
+export const SPECIFIC_OBJECTIVES: TitleItemsItem[] = [
+  {
+    title: "Atención Integral con Calidad y Humanización",
+    items: [
+      "Implementar protocolos clínicos estandarizados en el 95% de los servicios asistenciales.",
+      "Capacitar al personal de salud en seguridad del paciente y atención humanizada 2 veces al año (mínimo 80% del personal).",
+      "Reducir en un 15% los eventos adversos asociados a la atención en salud.",
+      "Evaluar la satisfacción del usuario mediante encuestas trimestrales, alcanzando un nivel de satisfacción mínimo del 85%.",
+    ],
+  },
+  {
+    title: "Promoción de la Salud y Prevención de la Enfermedad",
+    items: [
+      "Ejecutar jornadas de promoción y prevención dirigidas a la comunidad 1 vez al mes (12 al año).",
+      "Incrementar en un 20% la cobertura de programas de detección temprana (citologías, tamizajes, vacunación).",
+      "Identificar y hacer seguimiento al 90% de pacientes con factores de riesgo priorizados.",
+      "Desarrollar campañas educativas trimestrales, alcanzando al menos el 70% de la población usuaria activa.",
+    ],
+  },
+  {
+    title: "Acceso Oportuno y Eficiencia en la Atención",
+    items: [
+      "Disminuir los tiempos de espera en consulta externa en un 20%.",
+      "Lograr que el 90% de las citas sean asignadas en menos de 3 días hábiles.",
+      "Garantizar disponibilidad de servicios básicos en un 95% de cumplimiento de horarios establecidos.",
+      "Reducir en un 15% los tiempos de trámites administrativos para los usuarios.",
+    ],
   },
 ];
 

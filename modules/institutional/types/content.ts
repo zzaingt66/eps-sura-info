@@ -4,7 +4,8 @@ export type TabKey =
   | "objetivos"
   | "politicasCalidad"
   | "valoresInstitucionales"
-  | "serviciosIps";
+  | "serviciosIps"
+  | "descripcionServicios";
 
 export interface TabDefinition {
   key: TabKey;
@@ -35,6 +36,11 @@ export interface OfficeInfo {
 export interface TitleDescriptionItem {
   title: string;
   description: string;
+}
+
+export interface TitleItemsItem {
+  title: string;
+  items: string[];
 }
 
 export interface ServiceItem extends TitleDescriptionItem {

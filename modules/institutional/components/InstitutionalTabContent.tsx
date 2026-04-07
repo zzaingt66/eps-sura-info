@@ -5,6 +5,7 @@ import { ObjectivesSection } from "./sections/Objetivos";
 import { PurposeSection } from "./sections/Propositos";
 import { QualityPoliciesSection } from "./sections/PoliticaCalidad";
 import { ResenaSection } from "./sections/Resenas";
+import { ServicesDescriptionSection } from "./sections/DescripcionServicios";
 import { ServicesSection } from "./sections/Servicios";
 import { ValuesSection } from "./sections/Valores";
 
@@ -37,6 +38,7 @@ export function InstitutionalTabContent({ activeTab }: InstitutionalTabContentPr
       {activeTab === "politicasCalidad" && <QualityPoliciesSection />}
       {activeTab === "valoresInstitucionales" && <ValuesSection />}
       {activeTab === "serviciosIps" && <ServicesSection />}
+      {activeTab === "descripcionServicios" && <ServicesDescriptionSection />}
     </article>
   );
 }
