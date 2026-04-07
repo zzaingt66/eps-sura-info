@@ -16,6 +16,7 @@ export const TABS: TabDefinition[] = [
   { key: "valoresInstitucionales", label: "Valores Institucionales" },
   { key: "politicasCalidad", label: "Políticas de Calidad" },
   { key: "objetivos", label: "Objetivos generales" },
+  { key: "objetivosEspecificos", label: "Objetivos específicos" },
   { key: "serviciosIps", label: "Servicios de una IPS" },
   { key: "descripcionServicios", label: "Descripción de servicios" },
 ];
@@ -40,6 +41,11 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
     title: "Objetivos generales",
     description:
       "Propósitos estratégicos que orientan el servicio integral y el compromiso de VitaNova IPS con sus usuarios.",
+  },
+  objetivosEspecificos: {
+    title: "Objetivos específicos",
+    description:
+      "Metas concretas y medibles que guían las acciones de VitaNova IPS en calidad, prevención y acceso oportuno.",
   },
 
   valoresInstitucionales: {
