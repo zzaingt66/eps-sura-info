@@ -12,13 +12,18 @@ import type {
 export const TABS: TabDefinition[] = [
   { key: "valoresInstitucionales", label: "Valores Institucionales" },
   { key: "politicasCalidad", label: "Políticas de Calidad" },
-  { key: "serviciosIps", label: "Servicios de una IPS" }, 
+  { key: "serviciosIps", label: "Servicios de una IPS" },
   { key: "objetivos", label: "Objetivos generales" },
   { key: "proposito", label: "Misión y visión" },
   { key: "resena", label: "Reseña histórica" },
 ];
 
 export const SECTION_META: Record<TabKey, SectionMeta> = {
+  politicasCalidad: {
+    title: "Políticas de Calidad",
+    description:
+      "Lineamientos institucionales para garantizar atención segura, oportuna, humanizada y con mejora continua.",
+  },
   resena: {
     title: "Reseña histórica",
     description:
@@ -34,11 +39,7 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
     description:
       "Propósitos estratégicos que orientan el servicio integral y el compromiso de VitaNova IPS con sus usuarios.",
   },
-  politicasCalidad: {
-    title: "Políticas de Calidad",
-    description:
-      "Lineamientos institucionales para garantizar atención segura, oportuna, humanizada y con mejora continua.",
-  },
+
   valoresInstitucionales: {
     title: "Valores Institucionales",
     description:
