@@ -94,10 +94,22 @@ export const PURPOSE_CARDS: TitleDescriptionItem[] = [
   },
 ];
 
-export const GENERAL_OBJECTIVES: string[] = [
-  "Brindar servicios de salud con calidad, seguridad y atención humanizada a todos los usuarios.",
-  "Promover la prevención de enfermedades y el cuidado de la salud en la comunidad.",
-  "Garantizar el acceso oportuno y eficiente a los servicios de salud, contribuyendo al bienestar y mejoramiento de la calidad de vida de los usuarios.",
+export const GENERAL_OBJECTIVES: TitleDescriptionItem[] = [
+  {
+    title: "Atención Integral con Calidad y Humanización",
+    description:
+      "Garantizar la prestación de servicios de salud integrales mediante la aplicación de protocolos clínicos estandarizados, asegurando calidad, seguridad del paciente y una atención humanizada en todos los niveles de atención.",
+  },
+  {
+    title: "Promoción de la Salud y Prevención de la Enfermedad",
+    description:
+      "Desarrollar e implementar programas de promoción de la salud y prevención de la enfermedad, orientados a la detección temprana, el control de factores de riesgo y la educación continua de la comunidad usuaria.",
+  },
+  {
+    title: "Acceso Oportuno y Eficiencia en la Atención",
+    description:
+      "Asegurar el acceso oportuno a los servicios de salud a través de una gestión eficiente de los recursos, optimización de los tiempos de atención y fortalecimiento de los procesos administrativos y asistenciales.",
+  },
 ];
 
 export const QUALITY_POLICIES: string[] = [

@@ -8,10 +8,11 @@ export function ObjectivesSection() {
           key={`objetivo-${index}`}
           className="detail-card rounded-[1.6rem] border border-white/60 bg-white/42 p-5 backdrop-blur-sm"
         >
-          <p className="text-md text-ink-strong">
-            <span className="mr-4 font-semibold text-brand-700">{index + 1}.</span>
-            {objective}
-          </p>
+          <h3 className="text-md font-semibold text-brand-700">
+            <span className="mr-2">{index + 1}.</span>
+            {objective.title}
+          </h3>
+          <p className="mt-2 text-md text-ink-strong">{objective.description}</p>
         </section>
       ))}
     </div>
