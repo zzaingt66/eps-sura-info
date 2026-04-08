@@ -12,7 +12,8 @@ import type {
 
 export const TABS: TabDefinition[] = [
   { key: "resena", label: "Reseña histórica" },
-  { key: "proposito", label: "Misión y visión" },
+  { key: "proposito", label: "Misión" },
+  { key: "vision", label: "Visión" },
   { key: "valoresInstitucionales", label: "Valores Institucionales" },
   { key: "politicasCalidad", label: "Políticas de Calidad" },
   { key: "objetivos", label: "Objetivos generales" },
@@ -34,9 +35,14 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
       "Origen, motivación y proyección de VitaNova IPS desde su creación en 2026.",
   },
   proposito: {
-    title: "Misión y visión",
+    title: "Misión",
     description:
-      "Declaraciones institucionales que resumen el propósito y la meta de crecimiento de VitaNova IPS.",
+      "Brindar servicios de salud integrales con calidad, responsabilidad y humanización, promoviendo el bienestar y la prevención de enfermedades en la comunidad.",
+  },
+  vision: {
+    title: "Visión",
+    description:
+      "Para el año 2030, ser una IPS reconocida por la calidad de sus servicios, la atención humanizada y el compromiso con la salud y el bienestar de nuestros usuarios.",
   },
   objetivos: {
     title: "Objetivos generales",
@@ -101,18 +107,6 @@ export const CALI_OFFICE: OfficeInfo = {
   hours: "Horarios de atención 7:00am a 8:00pm",
 };
 
-export const PURPOSE_CARDS: TitleDescriptionItem[] = [
-  {
-    title: "Misión",
-    description:
-      "Brindar servicios de salud integrales con calidad, responsabilidad y humanización, promoviendo el bienestar y la prevención de enfermedades en la comunidad.",
-  },
-  {
-    title: "Visión",
-    description:
-      "Para el año 2030, ser una IPS reconocida por la calidad de sus servicios, la atención humanizada y el compromiso con la salud y el bienestar de nuestros usuarios.",
-  },
-];
 
 export const GENERAL_OBJECTIVES: TitleDescriptionItem[] = [
   {

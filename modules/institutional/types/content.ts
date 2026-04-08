@@ -1,6 +1,7 @@
 export type TabKey =
   | "resena"
   | "proposito"
+  | "vision"
   | "objetivos"
   | "politicasCalidad"
   | "valoresInstitucionales"

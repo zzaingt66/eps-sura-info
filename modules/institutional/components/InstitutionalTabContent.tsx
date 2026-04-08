@@ -3,7 +3,6 @@ import { SECTION_META } from "../data/content";
 import type { TabKey } from "../types/content";
 import { ObjectivesSection } from "./sections/Objetivos";
 import { SpecificObjectivesSection } from "./sections/ObjetivosEspecificos";
-import { PurposeSection } from "./sections/Propositos";
 import { QualityPoliciesSection } from "./sections/PoliticaCalidad";
 import { ResenaSection } from "./sections/Resenas";
 import { ServicesDescriptionSection } from "./sections/DescripcionServicios";
@@ -35,7 +34,6 @@ export function InstitutionalTabContent({ activeTab }: InstitutionalTabContentPr
       </div>
 
       {activeTab === "resena" && <ResenaSection />}
-      {activeTab === "proposito" && <PurposeSection />}
       {activeTab === "objetivos" && <ObjectivesSection />}
       {activeTab === "objetivosEspecificos" && <SpecificObjectivesSection />}
       {activeTab === "politicasCalidad" && <QualityPoliciesSection />}
