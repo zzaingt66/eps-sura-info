@@ -6,7 +6,8 @@ export type TabKey =
   | "valoresInstitucionales"
   | "serviciosIps"
   | "descripcionServicios"
-  | "objetivosEspecificos";
+  | "objetivosEspecificos"
+  | "tarifasServicios";
 
 export interface TabDefinition {
   key: TabKey;

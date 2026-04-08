@@ -19,6 +19,7 @@ export const TABS: TabDefinition[] = [
   { key: "objetivosEspecificos", label: "Objetivos específicos" },
   { key: "serviciosIps", label: "Servicios de una IPS" },
   { key: "descripcionServicios", label: "Descripción de servicios" },
+  { key: "tarifasServicios", label: "Valores" },
 ];
 
 export const SECTION_META: Record<TabKey, SectionMeta> = {
@@ -62,6 +63,11 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
     title: "Descripción de servicios",
     description:
       "Detalle de cada servicio ofrecido por VitaNova IPS: qué es, en qué consiste y cómo beneficia al usuario.",
+  },
+  tarifasServicios: {
+    title: "Valores",
+    description:
+      "Tarifas y paquetes de servicio de VitaNova IPS expresados en pesos colombianos (COP).",
   },
 };
 
