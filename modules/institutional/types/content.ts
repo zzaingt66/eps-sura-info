@@ -8,7 +8,8 @@ export type TabKey =
   | "serviciosIps"
   | "descripcionServicios"
   | "objetivosEspecificos"
-  | "tarifasServicios";
+  | "tarifasServicios"
+  | "ubicacionGeografica";
 
 export interface TabDefinition {
   key: TabKey;

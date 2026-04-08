@@ -9,6 +9,7 @@ import { ServicesDescriptionSection } from "./sections/DescripcionServicios";
 import { ServicesSection } from "./sections/Servicios";
 import { ValuesSection } from "./sections/Valores";
 import { TarifasServiciosSection } from "./sections/TarifasServicios";
+import { UbicacionGeograficaSection } from "./sections/UbicacionGeografica";
 
 interface InstitutionalTabContentProps {
   activeTab: TabKey;
@@ -41,6 +42,7 @@ export function InstitutionalTabContent({ activeTab }: InstitutionalTabContentPr
       {activeTab === "serviciosIps" && <ServicesSection />}
       {activeTab === "descripcionServicios" && <ServicesDescriptionSection />}
       {activeTab === "tarifasServicios" && <TarifasServiciosSection />}
+      {activeTab === "ubicacionGeografica" && <UbicacionGeograficaSection />}
     </article>
   );
 }

@@ -21,6 +21,7 @@ export const TABS: TabDefinition[] = [
   { key: "serviciosIps", label: "Servicios de una IPS" },
   { key: "descripcionServicios", label: "Descripción de servicios" },
   { key: "tarifasServicios", label: "Valores" },
+  { key: "ubicacionGeografica", label: "Ubicación geográfica" },
 ];
 
 export const SECTION_META: Record<TabKey, SectionMeta> = {
@@ -74,6 +75,11 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
     title: "Valores",
     description:
       "Tarifas y paquetes de servicio de VitaNova IPS expresados en pesos colombianos (COP).",
+  },
+  ubicacionGeografica: {
+    title: "Ubicación geográfica",
+    description:
+      "Encuéntranos en el Barrio Granada, en el corazón de Cali, Valle del Cauca.",
   },
 };
 
