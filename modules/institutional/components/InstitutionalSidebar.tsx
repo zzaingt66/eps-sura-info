@@ -71,6 +71,30 @@ export function InstitutionalSidebar() {
           vitanovasalud@gmail.com
         </a>
       </div>
+
+      <div className="mt-6 space-y-4">
+        <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
+          Material informativo
+        </h2>
+        <div className="overflow-hidden rounded-3xl border border-white/55 shadow-sm">
+          <Image
+            src="/info/follleto.png"
+            alt="Folleto IPS Vitanova"
+            width={600}
+            height={800}
+            className="h-auto w-full object-contain"
+          />
+        </div>
+        <div className="overflow-hidden rounded-3xl border border-white/55 shadow-sm">
+          <Image
+            src="/info/Tarjeta.png"
+            alt="Tarjeta de presentación IPS Vitanova"
+            width={600}
+            height={350}
+            className="h-auto w-full object-contain"
+          />
+        </div>
+      </div>
     </aside>
   );
 }
