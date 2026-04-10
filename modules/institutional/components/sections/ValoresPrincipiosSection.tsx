@@ -108,15 +108,8 @@ export function ValoresPrincipiosSection() {
               variants={fadeUp}
               className="glass-card p-5"
             >
-              <div className="flex items-start gap-4">
-                <span className="font-mono text-3xl font-bold text-brand-300 leading-none select-none">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="font-semibold text-brand-950">{obj.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-ink-strong">{obj.description}</p>
-                </div>
-              </div>
+              <h3 className="font-semibold text-brand-950">{obj.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-ink-strong">{obj.description}</p>
             </motion.div>
           ))}
         </motion.div>

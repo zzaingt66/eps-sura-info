@@ -76,12 +76,12 @@ export function ServiciosLandingSection() {
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
         <DialogContent
           showCloseButton={false}
-          className="sm:max-w-3xl min-h-[420px] overflow-hidden p-0 gap-0 rounded-2xl border border-brand-100/40 bg-white shadow-2xl"
+          className="sm:max-w-4xl min-h-[520px] overflow-hidden p-0 gap-0 rounded-2xl border border-brand-100/40 bg-white shadow-2xl"
         >
           {selected && (
-            <div className="flex flex-col sm:flex-row min-h-[420px]">
+            <div className="flex flex-col sm:flex-row min-h-[520px]">
               {/* Text content */}
-              <div className="flex flex-1 flex-col justify-center p-8 sm:p-10">
+              <div className="flex w-full sm:w-[38%] shrink-0 flex-col justify-center p-8 sm:p-10">
                 <DialogHeader>
                   <DialogTitle className="font-display text-2xl font-semibold text-brand-950">
                     {selected.title}
@@ -92,13 +92,13 @@ export function ServiciosLandingSection() {
                 </DialogDescription>
               </div>
 
-              {/* Image */}
-              <div className="relative h-56 sm:h-auto sm:w-[48%] shrink-0 overflow-hidden">
+              {/* Image — dominant right column, fully visible */}
+              <div className="relative h-72 sm:h-auto flex-1 flex items-center justify-center bg-gray-50 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={selected.imageSrc}
                   alt={selected.imageAlt}
-                  className="h-full w-full object-cover"
+                  className="max-h-full max-w-full object-contain p-4"
                 />
               </div>
             </div>
