@@ -1,19 +1,50 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { FOUNDING_PILLARS, RESENA_HISTORICA } from "../../data/content";
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const EASE: [number, number, number, number] = [0.25, 1, 0.5, 1];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+};
 
 export function ResenaSection() {
   return (
-    <div className="mt-6 grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
-      <div className="space-y-4 text-[15px] leading-7 text-ink-strong">
+    <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)]">
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="space-y-4 text-[15px] leading-7 text-ink-strong"
+      >
         {RESENA_HISTORICA.map((paragraph, index) => (
-          <p key={`resena-${index}`}>{paragraph}</p>
+          <motion.p key={`resena-${index}`} variants={fadeUp}>
+            {paragraph}
+          </motion.p>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="space-y-4">
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="space-y-4"
+      >
         {FOUNDING_PILLARS.map((pillar) => (
-          <section
+          <motion.section
             key={pillar.title}
-            className="detail-card rounded-[1.6rem] border border-white/60 bg-[linear-gradient(180deg,rgba(255,255,255,0.64),rgba(255,232,235,0.54))] p-5 backdrop-blur-sm"
+            variants={fadeUp}
+            whileHover={{ y: -3, transition: { duration: 0.2 } }}
+            className="glass-card p-5"
           >
             <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-700">
               Pilar
@@ -22,9 +53,9 @@ export function ResenaSection() {
               {pillar.title}
             </h4>
             <p className="mt-3 text-sm leading-6 text-ink-strong">{pillar.description}</p>
-          </section>
+          </motion.section>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

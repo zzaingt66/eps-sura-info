@@ -108,6 +108,11 @@ body::before {
   background: radial-gradient(circle, rgba(181, 0, 28, 0.20) 0%, rgba(212, 34, 58, 0.05) 75%, transparent 100%);
 }
 
+/* ─── Smooth-scroll ──────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ─── Card reveal animation ──────────────────────────────────────────── */
 .detail-card {
   animation: fadeInUp 0.6s ease-out backwards;
@@ -121,4 +126,46 @@ body::before {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ─── Accordion animation for shadcn base-ui ────────────────────────── */
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to   { height: var(--accordion-panel-height); opacity: 1; }
+}
+
+@keyframes accordion-up {
+  from { height: var(--accordion-panel-height); opacity: 1; }
+  to   { height: 0; opacity: 0; }
+}
+
+@theme inline {
+  --animate-accordion-down: accordion-down 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+  --animate-accordion-up:   accordion-up   0.22s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ─── Glassmorphism card — reusable for section content ─────────────── */
+.glass-card {
+  border: 1px solid rgba(255, 255, 255, 0.60);
+  border-radius: 1.4rem;
+  background: linear-gradient(160deg, rgba(255,255,255,0.62), rgba(255,232,236,0.28));
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 36px -24px rgba(107, 0, 14, 0.18);
+}
+
+/* ─── Sticky nav backdrop ────────────────────────────────────────────── */
+.nav-scrolled {
+  background: linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,232,236,0.55));
+  backdrop-filter: blur(18px);
+  box-shadow: 0 4px 24px -8px rgba(107, 0, 14, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.60);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
