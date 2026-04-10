@@ -72,28 +72,24 @@ export function ValoresPrincipiosSection() {
       {/* ─── Políticas de calidad ─── */}
       <div>
         <SectionHeading label="Marco normativo" title="Políticas de Calidad" />
-        <Accordion
-          multiple
-          className="flex w-full flex-col gap-2"
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="glass-card divide-y divide-brand-100/60 p-6"
         >
           {QUALITY_POLICIES.map((policy, index) => (
-            <AccordionItem
+            <motion.div
               key={`politica-${index}`}
-              value={`politica-${index}`}
-              className="glass-card overflow-hidden rounded-[1.4rem]"
+              variants={fadeUp}
+              className="flex items-start gap-4 py-4 first:pt-0 last:pb-0"
             >
-              <AccordionTrigger className="px-5 py-4 text-sm font-semibold text-brand-950 hover:no-underline">
-                <span className="mr-3 font-mono text-xs text-brand-500">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                {policy.length > 80 ? policy.slice(0, 78) + "…" : policy}
-              </AccordionTrigger>
-              <AccordionContent className="px-5 pb-4 text-sm leading-6 text-ink-strong">
-                {policy}
-              </AccordionContent>
-            </AccordionItem>
+              <span className="mt-1 block h-5 w-0.5 shrink-0 rounded-full bg-brand-500" />
+              <p className="text-sm leading-6 text-ink-strong">{policy}</p>
+            </motion.div>
           ))}
-        </Accordion>
+        </motion.div>
       </div>
 
       {/* ─── Objetivos generales ─── */}
