@@ -86,10 +86,11 @@ body::before {
 
 /* ─── Background orbs ────────────────────────────────────────────────── */
 .bg-orb {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   border-radius: 9999px;
   filter: blur(6px);
+  pointer-events: none;
 }
 
 .bg-orb-top {

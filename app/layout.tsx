@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
+import { SmoothScroll } from "./SmoothScroll";
 
 const titleFont = Cormorant_Garamond({
   variable: "--font-vitanova-title",
@@ -35,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${titleFont.variable} ${bodyFont.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
