@@ -76,10 +76,10 @@ export function ServiciosLandingSection() {
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
         <DialogContent
           showCloseButton={false}
-          className="sm:max-w-6xl min-h-150 overflow-hidden p-0 gap-0 rounded-2xl border border-brand-100/40 bg-white shadow-2xl"
+          className="sm:max-w-6xl max-h-none overflow-visible p-0 gap-0 rounded-2xl border border-brand-100/40 bg-white shadow-2xl"
         >
           {selected && (
-            <div className="flex flex-col sm:flex-row min-h-150">
+            <div className="flex flex-col sm:flex-row">
               {/* Text content */}
               <div className="flex w-full sm:w-[44%] shrink-0 flex-col justify-center p-8 sm:p-12">
                 <DialogHeader>
