@@ -136,7 +136,7 @@ export function UbicacionContactoSection() {
         <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
           Material informativo
         </h3>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="overflow-hidden rounded-3xl border border-white/55 shadow-sm">
             <Image
               src="/info/follleto.png"
@@ -146,7 +146,16 @@ export function UbicacionContactoSection() {
               className="h-auto w-full object-contain"
             />
           </div>
-          <div className="overflow-hidden rounded-3xl border border-white/55 shadow-sm h-80 ">
+          <div className="overflow-hidden rounded-3xl border border-white/55 shadow-sm">
+            <Image
+              src="/info/P%C3%B3ster%20M%C3%A9dico%20Profesional%20Azul.png"
+              alt="Póster médico IPS Vitanova"
+              width={600}
+              height={900}
+              className="h-auto w-full object-contain"
+            />
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-white/55 shadow-sm h-56 ">
             <Image
               src="/info/Tarjeta.png"
               alt="Tarjeta de presentación IPS Vitanova"
