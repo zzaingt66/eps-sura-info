@@ -76,23 +76,23 @@ export function ServiciosLandingSection() {
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
         <DialogContent
           showCloseButton={false}
-          className="sm:max-w-4xl min-h-130 overflow-hidden p-0 gap-0 rounded-2xl border border-brand-100/40 bg-white shadow-2xl"
+          className="sm:max-w-6xl min-h-150 overflow-hidden p-0 gap-0 rounded-2xl border border-brand-100/40 bg-white shadow-2xl"
         >
           {selected && (
-            <div className="flex flex-col sm:flex-row min-h-130">
+            <div className="flex flex-col sm:flex-row min-h-150">
               {/* Text content */}
-              <div className="flex w-full sm:w-[38%] shrink-0 flex-col justify-center p-8 sm:p-10">
+              <div className="flex w-full sm:w-[44%] shrink-0 flex-col justify-center p-8 sm:p-12">
                 <DialogHeader>
-                  <DialogTitle className="font-display text-2xl font-semibold text-brand-950">
+                  <DialogTitle className="font-display text-2xl font-semibold text-brand-950 sm:text-3xl">
                     {selected.title}
                   </DialogTitle>
                 </DialogHeader>
-                <DialogDescription className="mt-5 text-sm leading-7 text-ink-strong">
+                <DialogDescription className="mt-5 text-base leading-8 text-ink-strong">
                   {selected.description}
                 </DialogDescription>
 
                 {selected.packages && selected.packages.length > 0 ? (
-                  <ul className="mt-5 space-y-2 text-sm leading-6 text-ink-strong">
+                  <ul className="mt-6 space-y-2.5 text-sm leading-7 text-ink-strong sm:text-base">
                     {selected.packages.map((servicePackage) => (
                       <li key={servicePackage} className="flex items-start gap-2">
                         <span className="mt-2 size-1.5 shrink-0 rounded-full bg-brand-500" />
