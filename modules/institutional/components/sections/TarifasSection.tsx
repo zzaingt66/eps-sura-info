@@ -14,7 +14,7 @@ const TARIFAS = [
   {
     servicio: "PYP (Programa de Prevención y Promoción)",
     paquetes: [
-      { nombre: "Paquete Salud Adulto (Exámenes básicos)", valor: "80.000" },
+      { nombre: "Paquete de Salud Adulto (Exámenes básicos)", valor: "80.000" },
       { nombre: "Paquete Salud Mujer (Citología + Mamografía)", valor: "150.000" },
       { nombre: "Paquete Salud Hombre (Antígeno Prostático)", valor: "100.000" },
     ],
@@ -30,9 +30,9 @@ const TARIFAS = [
   {
     servicio: "Laboratorio clínico",
     paquetes: [
-      { nombre: "Hemograma Completo", valor: "25.000" },
+      { nombre: "Hemoglobina glicosilada", valor: "25.000" },
       { nombre: "Perfil Lipídico (Colesterol, Triglicéridos)", valor: "40.000" },
-      { nombre: "Glucosa en Ayunas", valor: "15.000" },
+      { nombre: "TSH (perfil tiroideo)", valor: "15.000" },
       { nombre: "Uroanálisis Completo", valor: "20.000" },
     ],
   },

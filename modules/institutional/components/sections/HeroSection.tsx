@@ -33,10 +33,10 @@ export function HeroSection() {
               <Image
                 src="/logo-vitanova.png"
                 alt="VitaNova IPS"
-                width={180}
-                height={180}
+                width={580}
+                height={580}
                 priority
-                className="h-auto w-36 drop-shadow-xl sm:w-44"
+                className="h-auto w-3xl drop-shadow-xl sm:w-44"
               />
             </motion.div>
 
