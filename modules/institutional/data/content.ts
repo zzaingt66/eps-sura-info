@@ -205,6 +205,11 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Consulta externa",
     description:
       "Atención médica general y con algunos especialistas, donde se evalúa, diagnostica y trata a los pacientes sin necesidad de hospitalización.",
+    packages: [
+      "Consulta médica general (control y seguimiento)",
+      "Consulta con especialista (primera vez)",
+      "Consulta con especialista (control)",
+    ],
     imageSrc: "/services/consulta-externa.png",
     imageAlt: "Consulta externa en IPS",
   },
@@ -212,6 +217,11 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Promoción y prevención (PyP)",
     description:
       "Actividades para cuidar la salud y evitar enfermedades, como vacunación, controles médicos y educación sobre hábitos saludables.",
+    packages: [
+      "Paquete salud adulto (exámenes básicos)",
+      "Paquetes de salud hombre (antígeno prostático)",
+      "Paquetes de salud mujer (citología + mamografía)",
+    ],
     imageSrc: "/services/promocion-prevencion.png",
     imageAlt: "Jornada de promoción y prevención en salud",
   },
@@ -219,6 +229,11 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Enfermería",
     description:
       "Servicios básicos de apoyo como aplicación de inyecciones, curaciones, toma de signos vitales y seguimiento de pacientes.",
+    packages: [
+      "Aplicación de inyectables",
+      "Curaciones simples",
+      "Toma de signos vitales y glucemia capilar",
+    ],
     imageSrc: "/services/atencion-domiciliaria.jpg",
     imageAlt: "Atención de enfermería a paciente",
   },
@@ -226,6 +241,12 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Laboratorio clínico",
     description:
       "Realización de exámenes como sangre, orina y otros análisis que ayudan al médico a diagnosticar enfermedades.",
+    packages: [
+      "TSH (perfil tiroideo)",
+      "Hemoglobina glicosilada",
+      "Perfil lípido (colesterol, triglicéridos)",
+      "Uroanalisis completo",
+    ],
     imageSrc: "/services/laboratorio-clinico.jpg",
     imageAlt: "Muestras y análisis de laboratorio clínico",
   },
@@ -233,6 +254,11 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Imágenes diagnósticas",
     description:
       "Servicios como rayos X y ecografías que permiten observar el interior del cuerpo para detectar problemas de salud.",
+    packages: [
+      "Radiografía de Tórax (PA y Lateral)",
+      "Ecografía Abdominal Total",
+      "Electrocardiograma (ECG)",
+    ],
     imageSrc: "/services/imagenes-diagnosticas.jpg",
     imageAlt: "Equipo de imágenes diagnósticas en IPS",
   },
@@ -240,6 +266,11 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Odontología",
     description:
       "Atención en salud oral, incluyendo limpieza, prevención y tratamientos básicos para el cuidado de los dientes.",
+    packages: [
+      "Consulta Odontológica y Diagnóstico",
+      "Detartraje (Limpieza Dental)",
+      "Exodoncia Simple (Extracción)",
+    ],
     imageSrc: "/services/odontologia.png",
     imageAlt: "Consulta de odontología en IPS",
   },
@@ -247,6 +278,7 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Rehabilitación",
     description:
       "Terapias como fisioterapia o terapia respiratoria para ayudar a los pacientes a recuperarse de lesiones o enfermedades.",
+    packages: ["Sesión de Fisioterapia", "Sesión de Terapia Ocupacional"],
     imageSrc: "/services/rehabilitacion.png",
     imageAlt: "Sesión de rehabilitación terapéutica",
   },
@@ -254,6 +286,7 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Atención domiciliaria",
     description:
       "Servicios de salud brindados en la casa del paciente, especialmente para personas con dificultad para desplazarse.",
+    packages: ["Visita Médica Domiciliaria", "Enfermería Domiciliaria (1 hora)"],
     imageSrc: "/services/enfermeria.jpg",
     imageAlt: "Atención domiciliaria con personal de salud",
   },
@@ -261,6 +294,7 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Telemedicina",
     description:
       "Consultas médicas a distancia mediante llamadas o videollamadas, facilitando el acceso a la atención.",
+    packages: ["Consulta Médica General Virtual", "Orientación Médica Telefónica"],
     imageSrc: "/services/telemedicina.jpg",
     imageAlt: "Consulta médica por telemedicina",
   },
@@ -268,6 +302,7 @@ export const IPS_SERVICES: ServiceItem[] = [
     title: "Urgencias básicas",
     description:
       "Atención inmediata a pacientes con problemas de salud que requieren intervención rápida, pero que no son de alta complejidad.",
+    packages: ["Valoración Médica Inicial", "Sutura de Herida Menor"],
     imageSrc: "/services/urgencias-basicas.jpg",
     imageAlt: "Atención de urgencias básicas en IPS",
   },

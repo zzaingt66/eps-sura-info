@@ -50,6 +50,7 @@ export interface TitleItemsItem {
 export interface ServiceItem extends TitleDescriptionItem {
   imageSrc: string;
   imageAlt: string;
+  packages?: string[];
 }
 
 export interface BannerSlide {
