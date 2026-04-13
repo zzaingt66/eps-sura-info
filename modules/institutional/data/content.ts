@@ -101,7 +101,9 @@ export const CORPORATE_INFO: LabelValueItem[] = [
 ];
 
 export const CONTACT_LINES: ContactLine[] = [
-  { city: "Whatsapp", phone: "+57 323 650 5745" },
+  { city: "Teléfono", phone: "+57 604 540 6115" },
+
+  { city: "Whatsapp", phone: "+57 323 640 5745" },
 ];
 
 export const CALI_OFFICE: OfficeInfo = {
@@ -114,11 +116,11 @@ export const BANNER_SLIDES: BannerSlide[] = [
   {
     imageSrc: "/banner/folleto-banner.png",
     imageAlt: "Banner institucional de VitaNova IPS con servicios, horarios, ubicación y datos de contacto.",
-    },
-    {
+  },
+  {
     imageSrc: "/banner/welcome-banner.png",
     imageAlt: "Banner institucional de VitaNova IPS con servicios, horarios, ubicación y datos de contacto.",
-    }
+  }
 ];
 
 
