@@ -117,9 +117,17 @@ export function UbicacionContactoSection() {
           <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 mb-3">
             Sede principal
           </h3>
-          <p className="font-display text-xl font-semibold text-brand-950">{CALI_OFFICE.name}</p>
-          <p className="mt-2 text-sm leading-6 text-ink-strong">{CALI_OFFICE.address}</p>
-          <p className="mt-2 text-sm text-ink-soft">{CALI_OFFICE.hours}</p>
+          <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-brand-700">
+            Dirección
+          </p>
+          <p className="mt-0.5 text-sm leading-6 text-ink-strong">{CALI_OFFICE.address}</p>
+
+          <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-brand-700">
+            Horarios de atención
+          </p>
+          <p className="mt-0.5 text-sm text-ink-strong">{CALI_OFFICE.hours}</p>
+          <p className="mt-1 text-sm text-ink-strong">Sábados, domingos y festivos de 7:00am a 2:00pm</p>
+
         </motion.div>
       </motion.div>
 

@@ -101,14 +101,13 @@ export const CORPORATE_INFO: LabelValueItem[] = [
 ];
 
 export const CONTACT_LINES: ContactLine[] = [
-  { city: "Resto del país", phone: "+57 02 8000 518 519" },
-  { city: "Cali", phone: "+57 604 540 6115" },
+  { city: "Whatsapp", phone: "+57 323 650 5745" },
 ];
 
 export const CALI_OFFICE: OfficeInfo = {
   name: "Oficina Cali",
   address: "Avenida 8N #15AN-31, Barrio Granada, Cali, Valle del Cauca, Colombia",
-  hours: "Horarios de atención 7:00am a 8:00pm",
+  hours: "Lunes a viernes de 7:00am a 8:00pm",
 };
 
 export const BANNER_SLIDES: BannerSlide[] = [
