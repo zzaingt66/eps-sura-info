@@ -28,7 +28,7 @@ export function HeroSection() {
           className="glass-panel p-8 sm:p-12"
         >
           {/* Top: logo + identity */}
-          <div className="flex items-center gap-6 sm:flex-row sm:items-start sm:gap-10">
+          <div className="flex items-center justify-around gap-6 sm:flex-row sm:items-start sm:gap-10">
             <motion.div variants={item} className="shrink-0">
               <Image
                 src="/logo-vitanova.png"
