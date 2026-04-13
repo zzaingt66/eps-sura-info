@@ -2,8 +2,10 @@
 
 import { StickyNav } from "../components/StickyNav";
 import { SectionWrapper } from "../components/SectionWrapper";
+import { BannerSwiperSection } from "../components/sections/BannerSwiperSection";
 import { HeroSection } from "../components/sections/HeroSection";
 import { ResenaSection } from "../components/sections/Resenas";
+import { SECTION_META } from "../data/content";
 import { ValoresPrincipiosSection } from "../components/sections/ValoresPrincipiosSection";
 import { ServiciosLandingSection } from "../components/sections/ServiciosLandingSection";
 import { TarifasSection } from "../components/sections/TarifasSection";
@@ -45,10 +47,15 @@ export function InstitutionalHomePage() {
       <StickyNav />
 
       <main>
-        {/* ── 1. Hero ── */}
+        {/* ── 1. Banner ── */}
+        <SectionWrapper id="banner" className="pt-24 pb-8">
+          <BannerSwiperSection />
+        </SectionWrapper>
+
+        {/* ── 2. Hero ── */}
         <HeroSection />
 
-        {/* ── 2. Reseña histórica ── */}
+        {/* ── 3. Reseña histórica ── */}
         <SectionWrapper id="resena" className="px-4 pb-20 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
@@ -60,7 +67,41 @@ export function InstitutionalHomePage() {
           </div>
         </SectionWrapper>
 
-        {/* ── 3. Valores & Principios ── */}
+        {/* ── 3b. Misión & Visión ── */}
+        <SectionWrapper id="mision" className="px-4 pb-8 sm:px-8">
+          <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
+            <LandingSectionHeader
+              label="Identidad"
+              title="Misión & Visión"
+            />
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="glass-card p-6">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                  Misión
+                </p>
+                <h2 className="mt-2 font-display text-xl font-semibold text-brand-950">
+                  Propósito institucional
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-ink-strong">
+                  {SECTION_META.proposito.description}
+                </p>
+              </div>
+              <div className="glass-card p-6">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                  Visión
+                </p>
+                <h2 className="mt-2 font-display text-xl font-semibold text-brand-950">
+                  Horizonte 2030
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-ink-strong">
+                  {SECTION_META.vision.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </SectionWrapper>
+
+        {/* ── 4. Valores & Principios ── */}
         <SectionWrapper id="valores" className="px-4 pb-20 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
@@ -72,7 +113,7 @@ export function InstitutionalHomePage() {
           </div>
         </SectionWrapper>
 
-        {/* ── 4. Servicios ── */}
+        {/* ── 5. Servicios ── */}
         <SectionWrapper id="servicios" className="px-4 pb-20 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
@@ -84,7 +125,7 @@ export function InstitutionalHomePage() {
           </div>
         </SectionWrapper>
 
-        {/* ── 5. Tarifas ── */}
+        {/* ── 6. Tarifas ── */}
         <SectionWrapper id="tarifas" className="px-4 pb-20 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
@@ -96,7 +137,7 @@ export function InstitutionalHomePage() {
           </div>
         </SectionWrapper>
 
-        {/* ── 6. Ubicación & Contacto ── */}
+        {/* ── 7. Ubicación & Contacto ── */}
         <SectionWrapper id="ubicacion" className="px-4 pb-24 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader

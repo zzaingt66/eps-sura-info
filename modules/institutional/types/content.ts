@@ -51,3 +51,11 @@ export interface ServiceItem extends TitleDescriptionItem {
   imageSrc: string;
   imageAlt: string;
 }
+
+export interface BannerSlide {
+  imageSrc: string;
+  imageAlt: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+}

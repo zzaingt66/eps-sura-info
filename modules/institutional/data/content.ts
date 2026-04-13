@@ -1,4 +1,5 @@
 import type {
+  BannerSlide,
   ContactLine,
   LabelValueItem,
   OfficeInfo,
@@ -38,12 +39,12 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
   proposito: {
     title: "Misión",
     description:
-      "Brindar servicios de salud integrales con calidad, responsabilidad y humanización, promoviendo el bienestar y la prevención de enfermedades en la comunidad.",
+      "Brindar servicios de salud integrales con altos estándares de calidad, responsabilidad y sentido humano, orientados a la promoción de la salud, la prevención de enfermedades, el diagnóstico oportuno y el tratamiento adecuado de nuestros usuarios. Nos comprometemos a ofrecer una atención segura, cálida y eficiente, centrada en las necesidades del paciente y su familia, garantizando el respeto por su dignidad y sus derechos.\n\nContamos con un talento humano altamente capacitado y comprometido, así como con procesos administrativos y asistenciales eficientes, que nos permiten asegurar la continuidad y oportunidad en la atención. Promovemos la mejora continua, la innovación y el uso adecuado de los recursos, con el fin de contribuir al bienestar, la satisfacción y la calidad de vida de la comunidad a la que servimos.",
   },
   vision: {
     title: "Visión",
     description:
-      "Para el año 2030, ser una IPS reconocida por la calidad de sus servicios, la atención humanizada y el compromiso con la salud y el bienestar de nuestros usuarios.",
+      "Para el año 2030, VITANOVA será una EPS-IPS reconocida a nivel regional y nacional por la calidad, seguridad y humanización en la prestación de servicios de salud, destacándose por una atención oportuna, eficiente y centrada en el usuario. Nos proyectamos como una institución innovadora, con talento humano altamente capacitado y comprometido, que fortalece continuamente sus procesos asistenciales y administrativos.\n\nVITANOVA buscará consolidarse como un referente en la gestión integral de los servicios de salud, promoviendo el acceso equitativo, el uso eficiente de los recursos y la mejora continua, generando confianza, satisfacción y bienestar en la comunidad.",
   },
   objetivos: {
     title: "Objetivos generales",
@@ -84,13 +85,10 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
 };
 
 export const RESENA_HISTORICA: string[] = [
-  "La empresa VitaNova IPS fue creada el 09 de marzo de 2026 por cuatro estudiantes que compartían el mismo interés de aportar al bienestar de la comunidad y mejorar la calidad de los servicios de salud.",
-  "La idea surgió a partir del deseo de crear una institución que brindara una atención más humana, responsable y comprometida con las necesidades de los pacientes.",
-  "Desde su creación, VitaNova IPS se pensó como una institución dedicada a ofrecer servicios de salud de manera integral, con el propósito de garantizar una atención digna, oportuna y de calidad.",
-  "Sus fundadores, al ser estudiantes interesados en el área de la salud, decidieron unir sus conocimientos y su iniciativa para desarrollar un proyecto que contribuyera al mejoramiento del sistema de atención y al cuidado de las personas.",
-  "Esta IPS nace con la visión de crecer y convertirse en una entidad reconocida por su buen servicio, su responsabilidad y su compromiso con la salud de la población.",
-  "Además, busca promover la prevención de enfermedades y el cuidado de la salud, brindando apoyo y orientación a cada uno de sus usuarios.",
-  "De esta manera, VitaNova IPS representa el esfuerzo y la iniciativa de jóvenes estudiantes que, con dedicación y trabajo en equipo, decidieron crear una empresa enfocada en ofrecer un mejor servicio de salud para la comunidad.",
+  "La empresa VITANOVA EPS_IPS fue creada el 09 de marzo de 2026 en la institución Politécnico Internacional de Occidente (PIO) por las estudiantes Danna Alejandra Marín, Laura Guerrero, Leticia Isabel y Gisel Soto, en el marco de su formación en el área de la salud.",
+  "VITANOVA EPS_IPS es una institución prestadora de servicios de salud orientada a brindar atención integral, con enfoque en la calidad, oportunidad y humanización del servicio.",
+  "Se proyecta como una entidad comprometida con la promoción de la salud, la prevención de enfermedades y la atención oportuna, contribuyendo al mejoramiento de la calidad de vida de la población.",
+  "Su visión es consolidarse como una institución reconocida por la calidad de sus servicios y su enfoque centrado en el usuario.",
 ];
 
 export const CORPORATE_INFO: LabelValueItem[] = [
@@ -113,6 +111,17 @@ export const CALI_OFFICE: OfficeInfo = {
   hours: "Horarios de atención 7:00am a 8:00pm",
 };
 
+export const BANNER_SLIDES: BannerSlide[] = [
+  {
+    imageSrc: "/banner/folleto-banner.png",
+    imageAlt: "Banner institucional de VitaNova IPS con servicios, horarios, ubicación y datos de contacto.",
+    },
+    {
+    imageSrc: "/banner/welcome-banner.png",
+    imageAlt: "Banner institucional de VitaNova IPS con servicios, horarios, ubicación y datos de contacto.",
+    }
+];
+
 
 export const GENERAL_OBJECTIVES: TitleDescriptionItem[] = [
   {
@@ -134,30 +143,21 @@ export const GENERAL_OBJECTIVES: TitleDescriptionItem[] = [
 
 export const SPECIFIC_OBJECTIVES: TitleItemsItem[] = [
   {
-    title: "Atención Integral con Calidad y Humanización",
+    title: "Atención y calidad",
     items: [
-      "Implementar protocolos clínicos estandarizados en el 95% de los servicios asistenciales.",
-      "Capacitar al personal de salud en seguridad del paciente y atención humanizada 2 veces al año (mínimo 80% del personal).",
-      "Reducir en un 15% los eventos adversos asociados a la atención en salud.",
-      "Evaluar la satisfacción del usuario mediante encuestas trimestrales, alcanzando un nivel de satisfacción mínimo del 85%.",
+      "Brindar una atención al usuario oportuna, respetuosa y humanizada, garantizando una adecuada orientación y respuesta a sus necesidades en los servicios de salud.",
     ],
   },
   {
-    title: "Promoción de la Salud y Prevención de la Enfermedad",
+    title: "Seguridad y Capacitación",
     items: [
-      "Ejecutar jornadas de promoción y prevención dirigidas a la comunidad 1 vez al mes (12 al año).",
-      "Incrementar en un 20% la cobertura de programas de detección temprana (citologías, tamizajes, vacunación).",
-      "Identificar y hacer seguimiento al 90% de pacientes con factores de riesgo priorizados.",
-      "Desarrollar campañas educativas trimestrales, alcanzando al menos el 70% de la población usuaria activa.",
+      "Fortalecer la calidad y seguridad en la prestación de los servicios de salud, mediante el cumplimiento de protocolos y buenas prácticas institucionales.",
     ],
   },
   {
-    title: "Acceso Oportuno y Eficiencia en la Atención",
+    title: "Capacitación del personal",
     items: [
-      "Disminuir los tiempos de espera en consulta externa en un 20%.",
-      "Lograr que el 90% de las citas sean asignadas en menos de 3 días hábiles.",
-      "Garantizar disponibilidad de servicios básicos en un 95% de cumplimiento de horarios establecidos.",
-      "Reducir en un 15% los tiempos de trámites administrativos para los usuarios.",
+      "Promover la capacitación continua del talento humano, con el fin de mejorar sus competencias y la calidad en la atención brindada a los usuarios.",
     ],
   },
 ];
@@ -179,24 +179,24 @@ export const INSTITUTIONAL_VALUES: TitleDescriptionItem[] = [
       "Brindamos una atención en salud basada en el respeto, la empatía y la dignidad humana, reconociendo las necesidades emocionales y físicas de cada usuario.",
   },
   {
-    title: "Responsabilidad",
-    description:
-      "Actuamos con compromiso y ética en cada una de nuestras funciones, garantizando el cumplimiento de nuestros deberes y la seguridad en la atención de los pacientes.",
-  },
-  {
     title: "Compromiso",
     description:
       "Trabajamos con dedicación y sentido de pertenencia, orientando nuestros esfuerzos al bienestar de los usuarios y al mejoramiento continuo de los servicios de salud.",
   },
   {
-    title: "Calidad",
-    description:
-      "Buscamos la excelencia en la prestación de los servicios, mediante la mejora continua de los procesos y el cumplimiento de estándares que garanticen una atención segura y efectiva.",
-  },
-  {
     title: "Trabajo en equipo",
     description:
       "Fomentamos la colaboración y la comunicación entre los diferentes profesionales de la salud, con el fin de ofrecer una atención integral y oportuna a los usuarios.",
+  },
+  {
+    title: "Responsabilidad",
+    description:
+      "Actuamos con compromiso y ética en cada una de nuestras funciones, garantizando el cumplimiento de nuestros deberes y la seguridad en la atención de los pacientes.",
+  },
+  {
+    title: "Calidad",
+    description:
+      "Buscamos la excelencia en la prestación de los servicios, mediante la mejora continua de los procesos y el cumplimiento de estándares que garanticen una atención segura y efectiva.",
   },
 ];
 

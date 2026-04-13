@@ -4,7 +4,15 @@ import { motion } from "framer-motion";
 
 const TARIFAS = [
   {
-    servicio: "PYP (Prevención y Promoción)",
+    servicio: "Consulta externa",
+    paquetes: [
+      { nombre: "Consulta Médica General (Control y Seguimiento)", valor: "50.000" },
+      { nombre: "Consulta de Especialista (Primera vez)", valor: "120.000" },
+      { nombre: "Consulta de Especialista (Control)", valor: "90.000" },
+    ],
+  },
+  {
+    servicio: "PYP (Programa de Prevención y Promoción)",
     paquetes: [
       { nombre: "Paquete Salud Adulto (Exámenes básicos)", valor: "80.000" },
       { nombre: "Paquete Salud Mujer (Citología + Mamografía)", valor: "150.000" },
@@ -91,9 +99,22 @@ export function TarifasSection() {
             <th className="border-r border-white/20 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide">
               Paquetes de servicio
             </th>
-            <th className="whitespace-nowrap px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide">
-              Valor (COP)
+            <th className="border-r border-white/20 whitespace-nowrap px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide">
+              Valor
             </th>
+            <th className="border-r border-white/20 px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide">
+              Vinculados
+            </th>
+            <th className="border-r border-white/20 px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide">
+              RC
+            </th>
+            <th className="border-r border-white/20 px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide">
+              RS
+            </th>
+            <th className="border-r border-white/20 px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide">
+              Eventualidades
+            </th>
+            <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wide">%</th>
           </tr>
         </thead>
         <tbody>
@@ -115,7 +136,22 @@ export function TarifasSection() {
                   {paquete.nombre}
                 </td>
                 <td className="whitespace-nowrap border-b border-b-[rgba(107,0,14,0.08)] px-4 py-3 text-right font-semibold tabular-nums text-brand-950">
-                  $ {paquete.valor}
+                  {paquete.valor}
+                </td>
+                <td className="border-b border-b-[rgba(107,0,14,0.08)] px-4 py-3 text-center text-ink-soft">
+                  
+                </td>
+                <td className="border-b border-b-[rgba(107,0,14,0.08)] px-4 py-3 text-center text-ink-soft">
+                  
+                </td>
+                <td className="border-b border-b-[rgba(107,0,14,0.08)] px-4 py-3 text-center text-ink-soft">
+                  
+                </td>
+                <td className="border-b border-b-[rgba(107,0,14,0.08)] px-4 py-3 text-center text-ink-soft">
+                  
+                </td>
+                <td className="border-b border-b-[rgba(107,0,14,0.08)] px-4 py-3 text-center text-ink-soft">
+                  
                 </td>
               </tr>
             ))

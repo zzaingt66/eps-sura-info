@@ -43,55 +43,7 @@ function SectionHeading({ label, title }: { label: string; title: string }) {
 export function ValoresPrincipiosSection() {
   return (
     <div className="space-y-14">
-      {/* ─── Valores institucionales ─── */}
-      <div>
-        <SectionHeading label="Cultura organizacional" title="Valores Institucionales" />
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="grid gap-4 sm:grid-cols-2"
-        >
-          {INSTITUTIONAL_VALUES.map((value) => (
-            <motion.div
-              key={value.title}
-              variants={fadeUp}
-              whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="glass-card p-5"
-            >
-              <h3 className="font-display text-xl font-semibold text-brand-950">
-                {value.title}
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-ink-strong">{value.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* ─── Políticas de calidad ─── */}
-      <div>
-        <SectionHeading label="Marco normativo" title="Políticas de Calidad" />
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="glass-card divide-y divide-brand-100/60 p-6"
-        >
-          {QUALITY_POLICIES.map((policy, index) => (
-            <motion.div
-              key={`politica-${index}`}
-              variants={fadeUp}
-              className="flex items-start gap-4 py-4 first:pt-0 last:pb-0"
-            >
-              <span className="mt-1 block h-5 w-0.5 shrink-0 rounded-full bg-brand-500" />
-              <p className="text-sm leading-6 text-ink-strong">{policy}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
+      
       {/* ─── Objetivos generales ─── */}
       <div>
         <SectionHeading label="Estrategia" title="Objetivos Generales" />
@@ -129,9 +81,6 @@ export function ValoresPrincipiosSection() {
               className="glass-card overflow-hidden rounded-[1.4rem]"
             >
               <AccordionTrigger className="px-5 py-4 text-sm font-semibold text-brand-950 hover:no-underline">
-                <span className="mr-3 font-mono text-xs text-brand-500">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
                 {obj.title}
               </AccordionTrigger>
               <AccordionContent className="px-5 pb-4">
@@ -148,6 +97,55 @@ export function ValoresPrincipiosSection() {
           ))}
         </Accordion>
       </div>
+      {/* ─── Valores institucionales ─── */}
+      <div>
+        <SectionHeading label="Cultura organizacional" title="Valores Institucionales" />
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid gap-4 sm:grid-cols-2"
+        >
+          {INSTITUTIONAL_VALUES.map((value) => (
+            <motion.div
+              key={value.title}
+              variants={fadeUp}
+              whileHover={{ y: -2, transition: { duration: 0.1 } }}
+              className="glass-card p-5"
+            >
+              <h3 className="font-display text-xl font-semibold text-brand-950">
+                {value.title}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-ink-strong">{value.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* ─── Políticas de calidad ─── */}
+      <div>
+        <SectionHeading label="Marco normativo" title="Políticas de Calidad" />
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="glass-card divide-y divide-brand-100/60 p-6"
+        >
+          {QUALITY_POLICIES.map((policy, index) => (
+            <motion.div
+              key={`politica-${index}`}
+              variants={fadeUp}
+              className="flex items-start gap-4 py-4 first:pt-0 last:pb-0"
+            >
+              <span className="mt-1 block h-5 w-0.5 shrink-0 rounded-full bg-brand-500" />
+              <p className="text-sm leading-6 text-ink-strong">{policy}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
     </div>
   );
 }
