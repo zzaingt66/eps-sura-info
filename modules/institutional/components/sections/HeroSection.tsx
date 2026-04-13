@@ -40,14 +40,13 @@ export function HeroSection() {
               />
             </motion.div>
 
-            <div className="flex flex-row gap-24 text-center sm:text-left">
+            <div className="flex flex-col gap-2 text-center sm:text-left">
               <motion.h1
                 variants={item}
                 className="font-display text-5xl font-semibold text-brand-950 sm:text-6xl lg:text-7xl"
               >
                 VitaNova IPS
               </motion.h1>
-              <motion.div>
                 <motion.blockquote
                   variants={item}
                   className="mt-1 max-w-md rounded-2xl border border-white/60 bg-white/45 px-4 py-3 text-sm leading-6 text-ink-strong shadow-[0_12px_28px_-18px_rgba(107,0,14,0.35)] backdrop-blur-sm"
@@ -60,7 +59,6 @@ export function HeroSection() {
                 >
                   NIT: 901.456.789-1
                 </motion.blockquote>
-              </motion.div>
             </div>
           </div>
 
