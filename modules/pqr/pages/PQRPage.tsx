@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FileText, UserCog } from "lucide-react";
 import { SectionWrapper } from "@/modules/institutional/components/SectionWrapper";
@@ -19,15 +20,17 @@ function LandingSectionHeader({
   title,
   description,
 }: {
-  label: string;
+  label?: string;
   title: string;
   description?: string;
 }) {
   return (
     <div className="mb-8">
-      <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-brand-700">
-        {label}
-      </p>
+      {label && (
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-700">
+          {label}
+        </p>
+      )}
       <h2 className="mt-1 font-display text-3xl font-semibold text-brand-950 sm:text-4xl">
         {title}
       </h2>
@@ -49,42 +52,54 @@ export function PQRPage() {
 
       <main>
         {/* ── Hero ── */}
-        <SectionWrapper id="hero" className="px-4 pt-28 pb-12 sm:px-8 sm:pt-32">
-          <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 36 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, ease: EASE }}
-            >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-brand-700">
-                Atención al usuario
-              </p>
-              <h1 className="mt-2 font-display text-4xl font-semibold text-brand-950 sm:text-5xl lg:text-6xl">
-                PQRF
-              </h1>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
-                Peticiones, Quejas, Reclamos y Felicitaciones — información sobre cómo presentar
-                una solicitud, los canales de atención, el proceso y la normativa vigente.
-              </p>
-            </motion.div>
+        <SectionWrapper id="hero" className="pt-14">
+          {/* Full-width banner */}
+          <div className="w-full overflow-hidden">
+            <Image
+              src="/banner/banner-pqrsf.jpg"
+              alt="VitaNova IPS — Sistema PQRSF"
+              width={1920}
+              height={648}
+              priority
+              className="w-full h-132 object-cover"
+            />
+          </div>
 
-            {/* Responsable card */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, ease: EASE, delay: 0.18 }}
-              className="mt-8 glass-card p-5 flex items-start gap-3 max-w-2xl"
-            >
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                <UserCog size={18} strokeWidth={1.8} />
-              </span>
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
-                  Responsable
+          {/* Hero text */}
+          <div className="px-4 pt-10 pb-12 sm:px-8">
+            <div className="mx-auto max-w-7xl">
+              <motion.div
+                initial={{ opacity: 0, y: 36 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.65, ease: EASE }}
+              >
+                <h1 className="font-display text-4xl font-semibold text-brand-950 sm:text-5xl lg:text-6xl">
+                  PQRSF
+                </h1>
+                <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft">
+                  Peticiones, Quejas, Reclamos, Sugerencias y Felicitaciones — información sobre cómo
+                  presentar una solicitud, los canales de atención, el proceso y la normativa vigente.
                 </p>
-                <p className="mt-1 text-sm leading-6 text-ink-strong">{PQR_RESPONSABLE}</p>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* Responsable card */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, ease: EASE, delay: 0.18 }}
+                className="mt-8 glass-card p-5 flex items-start gap-3 max-w-2xl"
+              >
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                  <UserCog size={18} strokeWidth={1.8} />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-700">
+                    Responsable
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-ink-strong">{PQR_RESPONSABLE}</p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </SectionWrapper>
 
@@ -93,7 +108,7 @@ export function PQRPage() {
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
               label="Tipos de solicitud"
-              title="Definiciones PQRF"
+              title="Definiciones PQRSF"
               description="Conozca qué significa cada tipo de solicitud para identificar cuál corresponde a su caso."
             />
             <PQRDefinicionesSection />
@@ -105,7 +120,7 @@ export function PQRPage() {
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
               label="Contacto"
-              title="Cómo presentar una PQRF"
+              title="Cómo presentar una PQRSF"
               description="VitaNova IPS pone a su disposición múltiples canales para que pueda radicar su solicitud de forma rápida y sencilla."
             />
             <PQRCanalesSection />
@@ -116,7 +131,6 @@ export function PQRPage() {
         <SectionWrapper id="proceso" className="px-4 pb-20 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
-              label="Gestión interna"
               title="Proceso de atención"
               description="Pasos que seguimos internamente para atender cada solicitud de manera oportuna."
             />
@@ -140,9 +154,8 @@ export function PQRPage() {
         <SectionWrapper id="normativa" className="px-4 pb-28 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
-              label="Marco legal"
               title="Normativa vigente"
-              description="Leyes y decretos que regulan el derecho de petición y la gestión de PQRF en Colombia."
+              description="Leyes y decretos que regulan el derecho de petición y la gestión de PQRSF en Colombia."
             />
             <PQRNormativaSection />
           </div>
@@ -153,7 +166,7 @@ export function PQRPage() {
       <footer className="pb-8 text-center">
         <p className="inline-flex items-center gap-1.5 text-[11px] text-ink-soft/70">
           <FileText size={12} strokeWidth={1.8} />
-          VitaNova IPS · Sistema PQRF
+          VitaNova IPS · Sistema PQRSF
         </p>
       </footer>
     </div>

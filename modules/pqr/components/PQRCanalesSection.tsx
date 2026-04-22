@@ -48,7 +48,7 @@ export function PQRCanalesSection() {
                 <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
                   {CanalIcon && <CanalIcon size={18} strokeWidth={1.8} />}
                 </span>
-                <p className="font-display text-lg font-semibold text-brand-950">{canal.titulo}</p>
+                <p className="font-sans text-lg font-semibold text-brand-950">{canal.titulo}</p>
               </div>
               <ul className="flex flex-col gap-3">
                 {canal.items.map((ci) => {
@@ -57,7 +57,7 @@ export function PQRCanalesSection() {
                     <div className="flex items-start gap-2.5">
                       <ItemIcon size={14} strokeWidth={1.8} className="mt-0.5 shrink-0 text-brand-500" />
                       <div>
-                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-700">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-brand-700">
                           {ci.label}
                         </p>
                         <p className="mt-0.5 text-sm leading-5 text-ink-strong">{ci.valor}</p>

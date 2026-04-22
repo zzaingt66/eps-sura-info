@@ -31,7 +31,7 @@ export function PQRTiemposSection() {
             <Clock size={18} strokeWidth={1.8} />
           </span>
           <div>
-            <p className="font-display text-base font-semibold text-brand-950">{t.tipo}</p>
+            <p className="font-sans text-base font-semibold text-brand-950">{t.tipo}</p>
             <p className="mt-1 text-sm font-medium text-brand-700">{t.plazo}</p>
           </div>
         </motion.div>

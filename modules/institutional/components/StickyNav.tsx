@@ -94,7 +94,7 @@ export function StickyNav() {
               className="inline-flex items-center gap-1.5 rounded-xl border border-brand-300/60 px-3 py-1.5 text-sm font-medium text-brand-700 transition-all duration-200 hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-brand-700"
             >
               <FileText size={13} strokeWidth={2} />
-              PQRF
+              PQRSF
             </Link>
           </li>
         </ul>

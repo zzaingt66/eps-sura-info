@@ -29,11 +29,11 @@ export function PQRNormativaSection() {
             }}
             className="glass-card p-5 flex items-start gap-3"
           >
-            <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
-              <BookOpen size={15} strokeWidth={1.8} />
-            </span>
+              <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700">
+                <BookOpen size={15} strokeWidth={1.8} />
+              </span>
             <div>
-              <p className="font-display text-sm font-semibold text-brand-950">{norma.nombre}</p>
+              <p className="font-sans text-sm font-semibold text-brand-950">{norma.nombre}</p>
               <p className="mt-1 text-sm leading-6 text-ink-soft">{norma.descripcion}</p>
             </div>
           </motion.li>
@@ -48,12 +48,13 @@ export function PQRNormativaSection() {
         transition={{ duration: 0.5, ease: EASE }}
         className="glass-card p-6 flex items-start gap-4"
       >
-        <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand-700 text-white shadow-[0_6px_18px_-8px_rgba(107,0,14,0.55)]">
-          <HeartHandshake size={20} strokeWidth={1.8} />
-        </span>
+
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand-700 text-white shadow-[0_6px_18px_-8px_rgba(107,0,14,0.55)]">
+            <HeartHandshake size={20} strokeWidth={1.8} />
+          </span>
         <div>
-          <p className="font-display text-base font-semibold text-brand-950">
-            Importancia del sistema PQRF
+          <p className="font-sans text-base font-semibold text-brand-950">
+            Importancia del sistema PQRSF
           </p>
           <p className="mt-2 text-sm leading-6 text-ink-soft">{PQR_IMPORTANCIA}</p>
         </div>

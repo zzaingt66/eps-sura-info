@@ -52,7 +52,7 @@ export const PQR_CANALES: PQRCanal[] = [
     items: [
       {
         label: "Sede principal",
-        valor: "Diríjase directamente a las instalaciones de VitaNova IPS para radicar su solicitud.",
+        valor: "Avenida 8N #15AN-31\nBarrio Granada, Cali, Valle del Cauca, Colombia",
       },
     ],
   },
@@ -158,7 +158,7 @@ export const PQR_NORMAS: PQRNorma[] = [
 ];
 
 export const PQR_IMPORTANCIA =
-  "El sistema PQRF permite mejorar continuamente la calidad del servicio, garantizar los derechos de los usuarios y fortalecer la confianza en la institución, promoviendo una atención segura, oportuna y humanizada.";
+  "El sistema PQRSF permite mejorar continuamente la calidad del servicio, garantizar los derechos de los usuarios y fortalecer la confianza en la institución, promoviendo una atención segura, oportuna y humanizada.";
 
 export const PQR_RESPONSABLE =
-  "El área de Atención al Usuario de VitaNova IPS es la encargada de recibir, gestionar, dar respuesta y realizar el seguimiento a todas las PQRF presentadas por los usuarios.";
+  "El área de Atención al Usuario de VitaNova IPS es la encargada de recibir, gestionar, dar respuesta y realizar el seguimiento a todas las PQRSF presentadas por los usuarios.";

@@ -49,7 +49,7 @@ export function PQRDefinicionesSection() {
               <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
                 {Icon && <Icon size={18} strokeWidth={1.8} />}
               </span>
-              <p className="font-display text-lg font-semibold text-brand-950">{def.titulo}</p>
+              <p className="font-sans text-lg font-semibold text-brand-950">{def.titulo}</p>
             </div>
             <p className="text-sm leading-6 text-ink-soft">{def.descripcion}</p>
           </motion.div>
