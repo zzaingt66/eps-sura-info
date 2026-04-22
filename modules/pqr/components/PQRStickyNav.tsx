@@ -2,21 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { FileText } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const NAV_LINKS = [
-  { id: "hero",      label: "Inicio" },
-  { id: "resena",    label: "Historia" },
-  { id: "valores",   label: "Valores" },
-  { id: "servicios", label: "Servicios" },
-  { id: "tarifas",   label: "Tarifas" },
-  { id: "ubicacion", label: "Contacto" },
+  { id: "definiciones", label: "Definiciones" },
+  { id: "canales",      label: "Canales" },
+  { id: "proceso",      label: "Proceso" },
+  { id: "tiempos",      label: "Tiempos" },
+  { id: "normativa",    label: "Normativa" },
 ] as const;
 
 type SectionId = (typeof NAV_LINKS)[number]["id"];
 
-export function StickyNav() {
-  const [active, setActive] = useState<SectionId>("hero");
+export function PQRStickyNav() {
+  const [active, setActive] = useState<SectionId>("definiciones");
   const [scrolled, setScrolled] = useState(false);
   const rafRef = useRef<number | null>(null);
 
@@ -26,7 +25,6 @@ export function StickyNav() {
       rafRef.current = requestAnimationFrame(() => {
         setScrolled(window.scrollY > 60);
 
-        // Find the section closest to the top of the viewport
         const sections = NAV_LINKS.map(({ id }) => ({
           id,
           el: document.getElementById(id),
@@ -61,17 +59,18 @@ export function StickyNav() {
     >
       <nav
         className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-8"
-        aria-label="Navegación principal"
+        aria-label="Navegación PQR"
       >
-        {/* Brand */}
-        <button
-          onClick={() => scrollTo("hero")}
-          className="font-display text-lg font-semibold text-brand-950 transition-opacity hover:opacity-75"
+        {/* Back to home */}
+        <Link
+          href="/"
+          className="flex items-center gap-1.5 font-display text-sm font-semibold text-brand-950 transition-opacity hover:opacity-70"
         >
-          VitaNova IPS
-        </button>
+          <ArrowLeft size={15} strokeWidth={2} />
+          <span className="hidden sm:inline">VitaNova IPS</span>
+        </Link>
 
-        {/* Links */}
+        {/* Section links */}
         <ul className="hidden items-center gap-1 sm:flex" role="list">
           {NAV_LINKS.map(({ id, label }) => (
             <li key={id}>
@@ -87,19 +86,9 @@ export function StickyNav() {
               </button>
             </li>
           ))}
-          {/* PQR link — routes to /pqr */}
-          <li>
-            <Link
-              href="/pqr"
-              className="inline-flex items-center gap-1.5 rounded-xl border border-brand-300/60 px-3 py-1.5 text-sm font-medium text-brand-700 transition-all duration-200 hover:bg-brand-50 focus-visible:outline-2 focus-visible:outline-brand-700"
-            >
-              <FileText size={13} strokeWidth={2} />
-              PQRF
-            </Link>
-          </li>
         </ul>
 
-        {/* Mobile: dots indicator */}
+        {/* Mobile: dots */}
         <div className="flex items-center gap-1.5 sm:hidden">
           {NAV_LINKS.map(({ id }) => (
             <button
