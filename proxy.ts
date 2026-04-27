@@ -4,7 +4,7 @@ import { verifyToken, COOKIE_NAME } from "@/lib/auth";
 const PROTECTED = /^\/dashboard(\/|$)/;
 const LOGIN_PATH = "/login";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (!PROTECTED.test(pathname)) return NextResponse.next();

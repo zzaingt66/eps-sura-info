@@ -118,7 +118,7 @@ const INITIAL_FORM: FormData = {
   tipo: "",
   nombre: "",
   email: "",
-  telefono: "",
+  telefono: 0,
   asunto: "",
   descripcion: "",
 };
@@ -167,7 +167,7 @@ export function PQRFormularioSection() {
           tipo: form.tipo,
           nombre: form.nombre.trim(),
           email: form.email.trim(),
-          ...(form.telefono.trim() ? { telefono: form.telefono.trim() } : {}),
+          ...(form.telefono ? { telefono: form.telefono } : {}),
           asunto: form.asunto.trim(),
           descripcion: form.descripcion.trim(),
         }),
@@ -456,10 +456,10 @@ export function PQRFormularioSection() {
               inputMode="numeric"
               autoComplete="tel"
               placeholder="3001234567"
-              value={form.telefono}
+              value={form.telefono || ""}
               onChange={(e) => {
                 const onlyDigits = e.target.value.replace(/\D/g, "");
-                setForm((p) => ({ ...p, telefono: onlyDigits }));
+                setForm((p) => ({ ...p, telefono: onlyDigits ? Number(onlyDigits) : 0 }));
               }}
               maxLength={10}
               className="w-full rounded-xl border border-brand-200 bg-white/60 px-4 py-3 text-sm text-ink-strong placeholder-ink-soft/40 outline-none transition-all duration-200 hover:border-brand-300 focus:border-brand-500 focus:bg-white focus:shadow-[0_0_0_3px_rgba(181,0,28,0.10)]"
