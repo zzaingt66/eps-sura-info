@@ -44,6 +44,7 @@ function LandingSectionHeader({
 export function PQRPage() {
   return (
     <div className="relative min-h-screen overflow-x-clip">
+
       {/* Background orbs — same as home */}
       <div className="bg-orb bg-orb-top" aria-hidden="true" />
       <div className="bg-orb bg-orb-bottom" aria-hidden="true" />
