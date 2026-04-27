@@ -84,7 +84,7 @@ interface FormData {
   tipo: TipoValue | "";
   nombre: string;
   email: string;
-  telefono: string;
+  telefono: number;
   asunto: string;
   descripcion: string;
 }
@@ -195,8 +195,8 @@ export function PQRFormularioSection() {
     const base =
       "w-full rounded-xl border bg-white/60 px-4 py-3 text-sm text-ink-strong placeholder-ink-soft/40 outline-none transition-all duration-200 focus:bg-white focus:shadow-[0_0_0_3px_rgba(181,0,28,0.10)]";
     return visibleErrors[field]
-      ? `${base} border-red-400 focus:border-red-500`
-      : `${base} border-brand-200 hover:border-brand-300 focus:border-brand-500`;
+      ? `${base} border-foreground focus:border-foreground`
+      : `${base} border-foreground hover:border-foreground focus:border-foreground`;
   }
 
   /* ── Success ── */
@@ -306,7 +306,7 @@ export function PQRFormularioSection() {
                   } ${
                     isActive
                       ? activeClass
-                      : `border-brand-500 bg-white/50 ${hoverClass}`
+                      : `border-foreground bg-white/50 ${hoverClass}`
                   }`}
                 >
                   <span
@@ -452,13 +452,16 @@ export function PQRFormularioSection() {
             </label>
             <input
               id="pqr-tel"
-              type="tel"
+              type="text"
+              inputMode="numeric"
               autoComplete="tel"
-              placeholder="+57 300 000 0000"
+              placeholder="3001234567"
               value={form.telefono}
-              onChange={(e) =>
-                setForm((p) => ({ ...p, telefono: e.target.value }))
-              }
+              onChange={(e) => {
+                const onlyDigits = e.target.value.replace(/\D/g, "");
+                setForm((p) => ({ ...p, telefono: onlyDigits }));
+              }}
+              maxLength={10}
               className="w-full rounded-xl border border-brand-200 bg-white/60 px-4 py-3 text-sm text-ink-strong placeholder-ink-soft/40 outline-none transition-all duration-200 hover:border-brand-300 focus:border-brand-500 focus:bg-white focus:shadow-[0_0_0_3px_rgba(181,0,28,0.10)]"
             />
           </div>

@@ -202,6 +202,14 @@ export function PQRPage() {
           <FileText size={12} strokeWidth={1.8} />
           VitaNova IPS · Sistema PQRSF
         </p>
+        <div className="mt-2">
+          <a
+            href="/login"
+            className="text-[10px] text-ink-soft/40 hover:text-ink-soft/70 transition-colors"
+          >
+            Acceso Administradores
+          </a>
+        </div>
       </footer>
     </div>
   );
