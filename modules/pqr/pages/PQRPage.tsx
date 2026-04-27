@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FileText, UserCog } from "lucide-react";
+import { FileText, UserCog, Send } from "lucide-react";
 import { SectionWrapper } from "@/modules/institutional/components/SectionWrapper";
 import { PQRStickyNav } from "../components/PQRStickyNav";
 import { PQRDefinicionesSection } from "../components/PQRDefinicionesSection";
@@ -10,6 +10,7 @@ import { PQRCanalesSection } from "../components/PQRCanalesSection";
 import { PQRProcesoSection } from "../components/PQRProcesoSection";
 import { PQRTiemposSection } from "../components/PQRTiemposSection";
 import { PQRNormativaSection } from "../components/PQRNormativaSection";
+import { PQRFormularioSection } from "../components/PQRFormularioSection";
 import { PQR_RESPONSABLE } from "../data/content";
 
 const EASE: [number, number, number, number] = [0.25, 1, 0.5, 1];
@@ -100,6 +101,26 @@ export function PQRPage() {
                   <p className="mt-1 text-sm leading-6 text-ink-strong">{PQR_RESPONSABLE}</p>
                 </div>
               </motion.div>
+
+              {/* CTA — scroll to form */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: EASE, delay: 0.28 }}
+                className="mt-6"
+              >
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("formulario")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="flex items-center gap-2.5 rounded-xl bg-brand-700 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_6px_20px_-6px_rgba(107,0,14,0.5)] transition-colors hover:bg-brand-950 focus-visible:outline-2 focus-visible:outline-brand-700"
+                >
+                  <Send size={15} strokeWidth={2} />
+                  Radicar PQRSF
+                </button>
+              </motion.div>
             </div>
           </div>
         </SectionWrapper>
@@ -152,13 +173,25 @@ export function PQRPage() {
         </SectionWrapper>
 
         {/* ── 5. Normativa ── */}
-        <SectionWrapper id="normativa" className="px-4 pb-28 sm:px-8">
+        <SectionWrapper id="normativa" className="px-4 pb-20 sm:px-8">
           <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
             <LandingSectionHeader
               title="Normativa vigente"
               description="Leyes y decretos que regulan el derecho de petición y la gestión de PQRSF en Colombia."
             />
             <PQRNormativaSection />
+          </div>
+        </SectionWrapper>
+
+        {/* ── 6. Formulario ── */}
+        <SectionWrapper id="formulario" className="px-4 pb-28 sm:px-8">
+          <div className="mx-auto max-w-7xl glass-panel p-6 sm:p-10">
+            <LandingSectionHeader
+              label="Formulario en línea"
+              title="Radicar solicitud"
+              description="Completa el formulario y recibirás una respuesta dentro de los tiempos establecidos por la normativa vigente."
+            />
+            <PQRFormularioSection />
           </div>
         </SectionWrapper>
       </main>

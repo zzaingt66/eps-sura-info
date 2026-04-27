@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { id: "proceso",      label: "Proceso" },
   { id: "tiempos",      label: "Tiempos" },
   { id: "normativa",    label: "Normativa" },
+  { id: "formulario",   label: "Formulario" },
 ] as const;
 
 type SectionId = (typeof NAV_LINKS)[number]["id"];
