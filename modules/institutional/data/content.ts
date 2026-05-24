@@ -85,8 +85,8 @@ export const SECTION_META: Record<TabKey, SectionMeta> = {
 };
 
 export const RESENA_HISTORICA: string[] = [
-  "La empresa VITANOVA EPS_IPS fue creada el 09 de marzo de 2026 en la institución Politécnico Internacional de Occidente (PIO) por las estudiantes Danna Alejandra Marín, Laura Guerrero, Leticia Isabel y Gisel Soto, en el marco de su formación en el área de la salud.",
-  "VITANOVA EPS_IPS es una institución prestadora de servicios de salud orientada a brindar atención integral, con enfoque en la calidad, oportunidad y humanización del servicio.",
+  "La empresa VITANOVA EPS-IPS fue creada el 09 de marzo de 2026 en la institución Politécnico Internacional de Occidente (PIO) por las estudiantes Danna Alejandra Marín, Laura Guerrero, Leticia Isabel y Gisel Soto, en el marco de su formación en el área de la salud.",
+  "VITANOVA EPS-IPS es una institución prestadora de servicios de salud orientada a brindar atención integral, con enfoque en la calidad, oportunidad y humanización del servicio.",
   "Se proyecta como una entidad comprometida con la promoción de la salud, la prevención de enfermedades y la atención oportuna, contribuyendo al mejoramiento de la calidad de vida de la población.",
   "Su visión es consolidarse como una institución reconocida por la calidad de sus servicios y su enfoque centrado en el usuario.",
 ];

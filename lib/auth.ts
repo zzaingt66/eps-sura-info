@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from "jose";
 
 const SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET ?? "change-me-in-production-32-chars-min"
+  process.env.JWT_SECRET ?? ""
 );
 
 const COOKIE_NAME = "admin_session";

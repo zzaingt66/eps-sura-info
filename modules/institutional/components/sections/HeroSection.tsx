@@ -31,7 +31,7 @@ export function HeroSection() {
           <div className="flex items-center justify-around gap-6 sm:flex-row sm:items-start sm:gap-10">
             <motion.div variants={item} className="shrink-0">
               <Image
-                src="/logo-vitanova.png"
+                src="/logo-vitanova-nuevo.png"
                 alt="VitaNova IPS"
                 width={356}
                 height={356}
